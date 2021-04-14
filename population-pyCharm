@@ -1,0 +1,12 @@
+startingNumberOfOrganisms = int ( input ( "Starting number organism: " ) )
+dailyIncrease = float( input( "Average daily increase: " ) )
+multiplyingDays = int( input( "Number of days to multiply: " ) )
+dailyIncrease /= 100
+population = startingNumberOfOrganisms
+
+print()
+
+print( "Day\tApproximate Population\n-----\t------------------" )
+for currentDay in range( 1, multiplyingDays + 1 ):
+    print( currentDay, "\t", format ( population, ".2f") )
+    population = population + ( dailyIncrease * population )
